@@ -27,8 +27,10 @@ If you do not run a Mac with Homebrew - which is a reason for regret - follow th
 If you want to convert "Attention is all you need" to speech, you can run the following command:
 
 ```
-python convert.py 1706.03762
+python convert.py "1706.03762"
 ```
+
+Better use the quotes around the arXiv ID.
 
 ## Issues and features.
 

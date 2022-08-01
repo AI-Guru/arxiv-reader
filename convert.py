@@ -41,10 +41,15 @@ def main():
     os.chdir("temp")
 
     # Download the paper as .tar.gz
+    print(f"Downloading paper {paper_id}...")
     os.system(f"arxiv-downloader --id {paper_id} --source")
 
     # Find the .tar.gz file.
-    tar_gz_file = glob.glob(f"{paper_id}*.tar.gz")[0]
+    try:
+        tar_gz_file = glob.glob(f"{paper_id}*.tar.gz")[0]
+    except:
+        print(f"Could not find the .tar.gz file for {paper_id}. Maybe the download did not work?")
+        exit
 
     # Extract the .tar.gz file to a temp folder.
     os.system(f"tar -xzf {tar_gz_file}")
