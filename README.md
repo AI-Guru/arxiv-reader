@@ -12,6 +12,7 @@ pip install transformers
 pip install g2p_en
 pip install beautifulsoup4
 pip install arxiv-downloader
+pip install fairseq
 ```
 
 The script also requires pandoc. If you are running on a Mac with Homebrew installed, you can install pandoc with:
